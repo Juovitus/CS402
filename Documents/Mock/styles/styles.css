@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Maven Pro;
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mid {
+    align-self: center;
+}
+
+.welcome {
+    margin-top: 20px;
+}
+
+.welcome > p {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.signin {
+    color: rgb(75, 75, 75);
+    font-size: 24px;
+    margin-top: 80px;
+}
+
+.login {
+    background-color: rgb(243, 243, 243);
+    height: 330px;
+    width: 270px;
+    padding: 0 20px;
+    border-radius: 4px;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.login-wrapper input {
+    width: 100px;
+}
+
+.login-wrapper label p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: rgb(0, 0, 0);
+}
+
+input[type=text], input[type=password] {
+    border: 2px solid rgb(189, 189, 189);
+    background-color: rgb(211, 211, 211);
+    height: 35px;
+    box-sizing: border-box;
+    width: 100%;
+    outline: none;
+    border-radius: 4px;
+}
+
+.login-wrapper > button {
+    background-color: #6cdb6c;
+    border: 0;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#password-text {
+    display: flex;
+}
+
+#password-text > a {
+    height: 0;
+    margin-left: auto;
+    text-decoration: none;
+}
+
+#password-text > a > p {
+    color: rgb(17, 79, 250);
+}

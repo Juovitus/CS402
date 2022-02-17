@@ -1,0 +1,68 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Maven Pro;
+}
+
+.main-wrapper {
+    display: flex;
+}
+
+.main-wrapper, .main-page {
+    height: 100%;
+}
+
+.main-page {
+    width: 100%;
+    padding: 110px 110px 110px 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.sidebar {
+    background-color: #00A8E8;
+    border-right: 2px solid #007EA7;
+    width: 90px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image, .settings {
+    align-self: center;
+    padding: 10px 0;
+    filter: invert(100%) sepia(0%) saturate(7489%) hue-rotate(183deg) brightness(109%) contrast(97%);
+}
+
+.image {
+    width: 65%;
+}
+
+.settings {
+    width: 50%;
+    margin-top: auto;
+}
+
+.sidebar a > p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 30px;
+    color: white;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.project {
+    height: 180px;
+    width: 230px;
+    background-color: rgb(238, 238, 238);
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    margin: 20px 20px;
+}
+
