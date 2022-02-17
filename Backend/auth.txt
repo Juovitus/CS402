@@ -1,1 +1,4 @@
 https://git.las.iastate.edu/oauth/authorize?client_id=fc94a7e013a5f5ae499b5fb8cebe8cf1480d21845933231572c6ed4f689167fc&redirect_uri=https://seniord.cs.iastate.edu/&response_type=code&state=FT52maX47nRH5ubBpraPU30CrgnU2ZX0&scope=read_user+api+read_api+read_repository&code_challenge=M5oPBP6RmJPh5QsGtx6ptVH7S2yjqt8sum96jBCyhZg&code_challenge_method=S256
+
+code: 8f4f8105a7c41fa23eaa18cdb897a66297ad677849d0c6633f0f6a89d7c08204
+state: FT52maX47nRH5ubBpraPU30CrgnU2ZX0
