@@ -4,6 +4,7 @@ import axios from "axios";
 const app = express();
 
 const port = 8080;
+let token = "";
 
 
 
@@ -32,20 +33,42 @@ app.get("/home", (req, res) => {
 
     const authURL = "https://git.las.iastate.edu/oauth/token?client_id=fc94a7e013a5f5ae499b5fb8cebe8cf1480d21845933231572c6ed4f689167fc&client_secret=15eb944a1a96401bb4add5fc16d5a3d7ae4026074fbad479926a4e2b3d601aa5&code=" + code + "&grant_type=authorization_code&redirect_uri=http://localhost:8080/home&code_verifier=M5oPBP6RmJPh5QsGtx6ptVH7S2yjqt8sum96jBCyhZg"
     // tslint:disable-next-line:no-console
-    console.log(authURL);
+    // console.log(authURL);
 
-    let token = "";
 
     axios.post(authURL).then( (val: any) => {
-        token = val;
+        // a480b1b22d1dfd351e39330c8ff58a0bd2db35169cc7f47bfc2da640d4611248
+        token = val.data.access_token;
 
         // tslint:disable-next-line:no-console
-        // console.log(val);
+        // console.log(token);
+        res.redirect("/dash");
    });
 
-   res.send(token);
+
+
+
+
+//    res.send(token);
 
 });
+
+    app.get("/dash", (req, res) => {
+
+        const config = {
+            headers: {Authorization: `Bearer ${token}`}
+        };
+
+        axios.get('https://git.las.iastate.edu/api/v4/projects?owned=true&simple=true', config).then( (val: any) => {
+            // token = val;
+
+            // tslint:disable-next-line:no-console
+            // console.log(val);
+
+            res.send(val.data);
+
+        });
+    })
 
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
