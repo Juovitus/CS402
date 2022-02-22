@@ -72,7 +72,13 @@ app.get("/home", (req, res) => {
         });
     })
 
+    app.get("/test", (req, res) => {
+        res.send("test respsonse.");
+        // tslint:disable-next-line:no-console
+        console.log("test received");
+    });
+
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
-    console.log(`server started at`);
+    console.log(`server started at${port}`);
 });
