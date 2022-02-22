@@ -1,12 +1,14 @@
 import express from "express";
 import randomstring from "randomstring";
 import axios from "axios";
+import * as routes from "./routes/api";
+
 const app = express();
 
 const port = "coms-402-sd-22.class.las.iastate.edu:8080";
 let token = "";
 
-
+routes.register( app );
 
 // const state = randomstring.generate();
 // // tslint:disable-next-line:no-console
