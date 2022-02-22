@@ -22,8 +22,9 @@ deploy-job:      # This job runs in the deploy stage.
   tags:
     - backend_deploy
   script:
-    - npm install
+
     - echo "Deploying application..."
     - cd Backend
+    - npm install
     - npm start
     - echo "Application successfully deployed."
