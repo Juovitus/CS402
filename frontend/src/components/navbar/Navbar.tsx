@@ -1,14 +1,14 @@
 import React from "react";
 import '../../App.css'
 
-class Navbar extends React.Component {
-    render(): React.ReactNode {
-        return (
-            <div className="nav">
-                Navbar
-            </div>
-        );
-    }
+interface Props {
+    text: string
 }
 
-export default Navbar;
+export const Navbar: React.FC<Props> = ({text}) => {
+    return (
+        <div className="Nav">
+            {text}
+        </div>
+    );
+};
