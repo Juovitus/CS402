@@ -5,7 +5,8 @@ import * as routes from "./routes/api";
 
 const app = express();
 
-const port = "coms-402-sd-22.class.las.iastate.edu:8080";
+// const port = "coms-402-sd-22.class.las.iastate.edu:8080";
+const port = 8080;
 let token = "";
 
 routes.register( app );
@@ -80,5 +81,5 @@ app.get("/home", (req, res) => {
 
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
-    console.log(`server started at${port}`);
+    console.log(`server started at ${port}`);
 });
