@@ -22,7 +22,7 @@ deploy-job:      # This job runs in the deploy stage.
   tags:
     - backend_deploy
   script:
-    - npm install --save tslint
+    - npm install
     - echo "Deploying application..."
     - cd Backend
     - npm start
