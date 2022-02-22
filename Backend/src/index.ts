@@ -3,7 +3,7 @@ import randomstring from "randomstring";
 import axios from "axios";
 const app = express();
 
-const port = 8080;
+const port = "coms-402-sd-22.class.las.iastate.edu";
 let token = "";
 
 
@@ -72,5 +72,5 @@ app.get("/home", (req, res) => {
 
 app.listen(port, () => {
     // tslint:disable-next-line:no-console
-    console.log(`server started at http://localhost:${ port }`);
+    console.log(`server started at`);
 });
