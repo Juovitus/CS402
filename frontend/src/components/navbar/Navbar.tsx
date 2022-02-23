@@ -15,10 +15,18 @@ export const Navbar: React.FC<Props> = () => {
 
     return (
         <div className="Nav">
-            <NavItem icon={mdiClose}/>
-            <NavItem text="Projects" icon={mdiApplicationOutline}/>
-            <NavItem text="Inbox" icon={mdiMailboxOpenOutline}/>
-            <NavItem text="Settings" icon={mdiCogOutline} />
+            <button id="close-nav-button" className="NavItem">
+                <NavItem id="closeButton" 
+                icon={mdiClose}/></button>
+            <NavItem id="projects" 
+                text="Projects" 
+                icon={mdiApplicationOutline}/>
+            <NavItem id="inbox" 
+                text="Inbox" 
+                icon={mdiMailboxOpenOutline}/>
+            <NavItem id="settings"
+                text="Settings" 
+                icon={mdiCogOutline} />
         </div>
     );
 };
