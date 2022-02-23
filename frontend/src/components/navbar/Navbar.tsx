@@ -1,14 +1,18 @@
 import React from "react";
 import '../../App.css'
+import { NavItem } from "./NavItem";
 
 interface Props {
-    text: string
 }
 
-export const Navbar: React.FC<Props> = ({text}) => {
+export const Navbar: React.FC<Props> = () => {
+
     return (
         <div className="Nav">
-            {text}
+            <h1>309</h1>
+            <NavItem text="Projects"/>
+            <NavItem text="Inbox" />
+            <NavItem text="Settings" />
         </div>
     );
 };

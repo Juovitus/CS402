@@ -7,7 +7,7 @@ import { Main } from './components/main/Main'
 function App() {
     return (
         <div className="App">
-            <Navbar text='Navbar'/>
+            <Navbar />
             <Header />
             <Main />
         </div>
