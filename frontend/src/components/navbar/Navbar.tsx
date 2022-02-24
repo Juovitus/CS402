@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import '../../App.css'
 import { NavItem } from "./NavItem";
 import { 
     mdiMailboxOpenOutline,
     mdiCogOutline,
     mdiApplicationOutline,
-    mdiClose
+    mdiClose,
+    mdiMenu
  } from '@mdi/js';
 
 interface Props {
@@ -13,20 +14,30 @@ interface Props {
 }
 
 export const Navbar: React.FC<Props> = () => {
+    const [mount, setMount] = useState(true);
+
     return (
         <div className="Nav">
-            <button id="close-nav-button" className="NavItem">
-                <NavItem id="closeButton" icon={mdiClose}/>
+            <button 
+                id="close-nav-button" 
+                className="NavItem"
+                onClick={() => setMount(!mount)}>
+                    <NavItem id="closeButton" 
+                        icon={mount ? mdiClose : mdiMenu} 
+                        mount = {mount}/>
                 </button>
             <NavItem id="projects" 
                 text="Projects"
-                icon={mdiApplicationOutline}/>
+                icon={mdiApplicationOutline}
+                mount = {mount}/>
             <NavItem id="inbox" 
                 text="Inbox" 
-                icon={mdiMailboxOpenOutline}/>
+                icon={mdiMailboxOpenOutline}
+                mount = {mount}/>
             <NavItem id="settings"
                 text="Settings"
-                icon={mdiCogOutline} />
+                icon={mdiCogOutline}
+                mount = {mount}/>
         </div>
     );
 };

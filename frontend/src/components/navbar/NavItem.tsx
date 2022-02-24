@@ -6,9 +6,10 @@ interface Props {
     id: string
     text?: string
     icon: string
+    mount: boolean
 }
 
-export const NavItem: React.FC<Props> = ({text, icon, id}) => {
+export const NavItem: React.FC<Props> = ({text, icon, id, mount}) => {
     const cn = `NavItem ${id}-nav-item`
 
     return (
@@ -17,7 +18,7 @@ export const NavItem: React.FC<Props> = ({text, icon, id}) => {
                 size='36px'
                 className="nav-item-icon"
                 />
-            <NavItemText text={text} />
+            {mount ? <NavItemText text={text} /> : null}
         </div>
     );
 };
