@@ -9,23 +9,23 @@ import {
  } from '@mdi/js';
 
 interface Props {
+    
 }
 
 export const Navbar: React.FC<Props> = () => {
-
     return (
         <div className="Nav">
             <button id="close-nav-button" className="NavItem">
-                <NavItem id="closeButton" 
-                icon={mdiClose}/></button>
+                <NavItem id="closeButton" icon={mdiClose}/>
+                </button>
             <NavItem id="projects" 
-                text="Projects" 
+                text="Projects"
                 icon={mdiApplicationOutline}/>
             <NavItem id="inbox" 
                 text="Inbox" 
                 icon={mdiMailboxOpenOutline}/>
             <NavItem id="settings"
-                text="Settings" 
+                text="Settings"
                 icon={mdiCogOutline} />
         </div>
     );

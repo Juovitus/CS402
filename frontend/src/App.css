@@ -8,7 +8,7 @@ html, body, #root, .App {
 
 .App {
     display: grid;
-    grid-template: 100px 1fr / 300px 1fr;
+    grid-template: 100px 1fr / min-content 1fr;
     grid-template-areas: 
         "nav header"
         "nav main";
@@ -34,11 +34,8 @@ html, body, #root, .App {
 .NavItem > span {
     font-size: 28px;
     font-weight: 600;
-}
-
-/* Icon to the left of the nav item text. */
-svg.nav-item-icon {
-    margin-right: 20px;
+    margin-right: 50px;
+    margin-left: 20px;
 }
 
 .settings-nav-item {

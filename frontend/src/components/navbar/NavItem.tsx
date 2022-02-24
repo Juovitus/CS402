@@ -1,5 +1,6 @@
 import React from "react";
 import Icon from '@mdi/react'
+import { NavItemText } from "./NavItemText";
 
 interface Props {
     id: string
@@ -16,7 +17,7 @@ export const NavItem: React.FC<Props> = ({text, icon, id}) => {
                 size='36px'
                 className="nav-item-icon"
                 />
-            <span>{text}</span>
+            <NavItemText text={text} />
         </div>
     );
 };
