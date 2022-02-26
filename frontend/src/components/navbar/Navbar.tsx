@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import '../../App.css'
 import { NavItem } from "./NavItem";
+import { NavLink } from "react-router-dom";
 import { 
     mdiMailboxOpenOutline,
     mdiCogOutline,
@@ -9,7 +10,6 @@ import {
     mdiMenu,
     mdiBookOpenOutline
  } from '@mdi/js';
-import { NavLink } from "react-router-dom";
 
 interface Props {
     
@@ -29,7 +29,8 @@ export const Navbar: React.FC<Props> = () => {
                         mount = {mount}/>
             </button>
 
-            <NavLink to="/" className="nav-link">
+            <NavLink to='/' 
+                className={({isActive}) => isActive ? 'nav-link-active' : 'nav-link'}>
                 <NavItem id="projects" 
                     text="Projects"
                     icon={mdiApplicationOutline}
@@ -41,7 +42,8 @@ export const Navbar: React.FC<Props> = () => {
                 icon={mdiMailboxOpenOutline}
                 mount = {mount}/>
 
-            <NavLink to="/data" className="nav-link">
+            <NavLink to='/data' 
+                className={({isActive}) => isActive ? 'nav-link-active' : 'nav-link'}>
                 <NavItem id="data"
                     text="Data"
                     icon={mdiBookOpenOutline}

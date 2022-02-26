@@ -6,19 +6,19 @@ html, body, #root {
     font-family: Maven Pro;
 }
 
-.App, .Data {
+.App {
     display: grid;
     grid-template: 100px 1fr / min-content 1fr;
     grid-template-areas: 
-        "nav header"
+        "nav main"
         "nav main";
-    height: 100%;
+    height: 100%; 
 }
 
 .Nav {
     grid-area: nav;
     background-color: rgb(66, 93, 216);
-    z-index: 2;
+    /* z-index: 2; */
     display: flex;
     flex-direction: column;
 }
@@ -37,12 +37,17 @@ html, body, #root {
     margin-left: 20px;
 }
 
-.nav-link {
+.nav-link, .nav-link-active {
     text-decoration: none;
+}
+
+.nav-link-active {
+    background-color: rgb(56, 80, 189);
 }
 
 .settings-nav-item {
     margin-top: auto;
+    padding-top: 20px;
 }
 
 .closeButton-nav-item {
@@ -61,13 +66,12 @@ html, body, #root {
 }
 
 .Header {
-    grid-area: header;
+    /*grid-area: header;*/
     background-color: rgb(58, 58, 58);
     box-shadow: 0px 3px 12px 0 rgb(43, 43, 43);
-    z-index: 1;
+    /*z-index: 1;*/
 }
 
 .Main {
     grid-area: main;
-    background-color: rgb(85, 85, 85);
 }
