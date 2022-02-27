@@ -37,3 +37,23 @@ html, body, #root, .App {
     grid-area: main;
     background-color: rgb(85, 85, 85);
 }
+
+.ProjectPreview {
+    display: grid;
+    grid-template: 200px 1fr / 100px 1fr;
+    grid-template-areas: 
+        "PreTop"
+        "PreBottom";
+    grid-area: main;
+    background-color: rgb(85, 85, 85);
+}
+
+.Top {
+    grid-area: top;
+    background-color: rgb(0, 0, 200);
+}
+
+.Bottom {
+    grid-area: bottom;
+    background-color: rgb(0, 200, 100);
+}
