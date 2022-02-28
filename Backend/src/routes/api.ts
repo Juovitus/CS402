@@ -28,9 +28,9 @@ export const register = ( app: express.Application ) => {
     // Gets latest commit from a project
     // userID: id of the user with access to the project
     // projectID: id of the project
-    app.get("/projects/commit/:userID/:projectID", (req, res) => {
+    // app.get("/projects/commit/:userID/:projectID", (req, res) => {
 
-    });
+    // });
 
     // app.post('/user/')
 };

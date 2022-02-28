@@ -2,6 +2,7 @@ import express from "express";
 import randomstring from "randomstring";
 import axios from "axios";
 import * as routes from "./routes/api";
+import mongoose from "mongoose";
 
 const app = express();
 
@@ -11,9 +12,11 @@ let token = "";
 
 routes.register( app );
 
-// const state = randomstring.generate();
-// // tslint:disable-next-line:no-console
-// console.log(state);
+mongoose.connect('mongodb://mdbadmin:password@coms-402-sd-22.class.las.iastate.edu:27017', () => {
+    // tslint:disable-next-line:no-console
+    console.log("connected to DB");
+});
+
 
 app.get("/", (req, res) => {
     // res.send("Hello TypeScript World!");
