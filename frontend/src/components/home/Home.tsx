@@ -1,4 +1,5 @@
 import React from "react";
+import { ProjectPreview } from "../projectpreview/ProjectPreview";
 
 interface Props {
     
@@ -6,6 +7,8 @@ interface Props {
 
 export const Home: React.FC<Props> = () => {
     return (
-        <div className='Home'>Home</div>
+        <div className='Home'>
+            <ProjectPreview />
+        </div>
     );
 }

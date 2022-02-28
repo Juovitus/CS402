@@ -6,6 +6,6 @@ interface Props {
 
 export const Bottom: React.FC<Props> = () => {
     return (
-        <div>Bottom</div>
+        <div className="Bottom">Bottom</div>
     );
 }
