@@ -9,10 +9,10 @@ html, body, #root {
 .App {
     display: grid;
     grid-template: 1fr 1fr / min-content 1fr;
-    grid-template-areas: 
+    grid-template-areas:
         "nav main"
         "nav main";
-    height: 100%; 
+    height: 100%;
 }
 
 .Nav {
@@ -71,4 +71,26 @@ html, body, #root {
 
 .Main {
     grid-area: main;
+    background-color: rgb(85, 85, 85);
+}
+
+.ProjectPreview {
+    display: grid;
+    grid-template: 200px 1fr / 100px 1fr;
+    grid-template-areas:
+        "PreTop"
+        "PreBottom";
+    grid-area: main;
+    background-color: rgb(85, 85, 85);
+}
+/* Currently can't change the top/bottom color but can change the ProjectPreview overall, kinda weird*/
+/*Project Preview Top Half*/
+.Top {
+    grid-area: top;
+    background-color: rgb(0, 0, 200);
+}
+/*Project Preview Bottom Half*/
+.Bottom {
+    grid-area: bottom;
+    background-color: rgb(0, 200, 100);
 }
