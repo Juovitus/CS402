@@ -37,10 +37,13 @@ export const Navbar: React.FC<Props> = () => {
                     mount = {mount}/>
             </NavLink>
 
-            <NavItem id="inbox" 
-                text="Inbox" 
-                icon={mdiMailboxOpenOutline}
-                mount = {mount}/>
+            <NavLink to='/inbox' 
+                className={({isActive}) => isActive ? 'nav-link-active' : 'nav-link'}>
+                <NavItem id="inbox" 
+                    text="Inbox" 
+                    icon={mdiMailboxOpenOutline}
+                    mount = {mount}/>
+            </NavLink>
 
             <NavLink to='/data' 
                 className={({isActive}) => isActive ? 'nav-link-active' : 'nav-link'}>
