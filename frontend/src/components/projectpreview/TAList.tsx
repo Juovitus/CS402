@@ -1,11 +1,12 @@
 import React from "react";
 
 interface Props {
-    
+    TAName: string
 }
 
-export const TAList: React.FC<Props> = () => {
+export const TAList: React.FC<Props> = (TAName) => {
+
     return (
-        <div>TAList</div>
+        <div>TAName</div>
     );
 }

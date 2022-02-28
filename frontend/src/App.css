@@ -47,12 +47,13 @@ html, body, #root, .App {
     grid-area: main;
     background-color: rgb(85, 85, 85);
 }
-
+/* Currently can't change the top/bottom color but can change the ProjectPreview overall, kinda weird*/
+/*Project Preview Top Half*/
 .Top {
     grid-area: top;
     background-color: rgb(0, 0, 200);
 }
-
+/*Project Preview Bottom Half*/
 .Bottom {
     grid-area: bottom;
     background-color: rgb(0, 200, 100);

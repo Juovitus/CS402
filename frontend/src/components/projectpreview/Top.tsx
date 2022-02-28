@@ -12,7 +12,7 @@ export const Top: React.FC<Props> = () => {
     return (
         <div>Top
         <ProjectName/>
-        <TAList/>
+        <TAList TAName="Test"/>
         <StudentList/>
         <SettingsButton/>
         <DemoDate/>
