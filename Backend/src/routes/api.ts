@@ -1,11 +1,18 @@
 import express from "express";
 import axios from "axios";
-
+import { User } from "../models/User";
 
 export const register = ( app: express.Application ) => {
 
     app.get("/user", (req, res) => {
         res.send("response");
+    });
+
+    app.post("/user", (req, res) => {
+        const Test = new User({
+            name: "test",
+            authKey: "testAuthKey"
+        });
     });
 
     // Returns all projects from a user
