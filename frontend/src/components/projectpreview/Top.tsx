@@ -9,8 +9,7 @@ export const Top: React.FC<Props> = ({projectName}) => {
         <div className="Top">
             {ProjectName(projectName)}
             {TAList}
-            {StudentList}
-            {DemoDate}
+            {BottomRow(1)}
         </div>
     );
 }
@@ -21,15 +20,21 @@ leaving as normal fn for now.
 */
 const ProjectName = (name:string) => {
     return (
-        <div>ProjectName - {name}</div>
+        <div id="project-name">{name}</div>
     );
 }
 
 /*
 Same goes for this and below.
 */
-const TAList = <div>TAName</div>
+const TAList = <div id="ta-name">TA</div>
 
-const DemoDate = <div>DemoDate</div>
-
-const StudentList = <div>StudentList</div>
+const BottomRow = (days:Number) => {
+    return (
+        /* bottom-row is flex container */
+        <div className="bottom-row">
+            <div id="student-list">Students</div>
+            <div id="demo-date">Demo - {days} days</div>
+        </div>
+    );
+}

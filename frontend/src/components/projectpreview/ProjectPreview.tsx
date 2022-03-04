@@ -3,7 +3,7 @@ import { Top } from "./Top"
 import { Bottom } from "./Bottom"
 
 interface Props {
-    
+    key: any
 }
 
 
