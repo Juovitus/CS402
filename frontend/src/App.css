@@ -75,24 +75,20 @@ html, body, #root {
 }
 
 .ProjectPreview {
-    display: grid;
-    grid-template: 1fr / 1fr;
-    grid-template-areas:
-        "top"
-        "bottom";
-    grid-area: main;
-    background-color: rgb(85, 85, 85);
+    background-color: grey;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
 }
 
-/* Currently can't change the top/bottom color but can change the ProjectPreview overall, kinda weird*/
 /*Project Preview Top Half*/
 .Top {
-    grid-area: top;
+    box-sizing: border-box;
     background-color: rgb(144, 144, 255);
 }
 
 /*Project Preview Bottom Half*/
 .Bottom {
-    grid-area: bottom;
     background-color: rgb(0, 200, 100);
 }
