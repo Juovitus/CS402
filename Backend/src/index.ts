@@ -11,8 +11,9 @@ const app = express();
 const port = 8080;
 let token = "";
 
+app.use(cors({origin: '*'}));
 routes.register( app );
-app.use(cors());
+
 
 mongoose.connect('mongodb://mdbadmin:password@coms-402-sd-22.class.las.iastate.edu:27017', () => {
     // tslint:disable-next-line:no-console
