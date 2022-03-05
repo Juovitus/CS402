@@ -24,11 +24,6 @@ const ProjectName = (name:string) => {
     );
 }
 
-/*
-Same goes for this and below.
-*/
-const TAList = <div id="ta-name">TA</div>
-
 const BottomRow = (days:Number) => {
     return (
         /* bottom-row is flex container */
@@ -38,3 +33,5 @@ const BottomRow = (days:Number) => {
         </div>
     );
 }
+
+const TAList = <div id="ta-name">TA</div>
