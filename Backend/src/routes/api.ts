@@ -1,8 +1,10 @@
 import express from "express";
 import axios from "axios";
 import { User } from "../models/User";
+import mongoose from "mongoose";
 
 export const register = ( app: express.Application ) => {
+
 
     app.get("/user", (req, res) => {
         const users = User.find();
