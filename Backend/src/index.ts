@@ -15,7 +15,7 @@ app.use(cors({origin: '*'}));
 routes.register( app );
 
 
-mongoose.connect('mongodb://mdbadmin:password@coms-402-sd-22.class.las.iastate.edu:27017', () => {
+mongoose.connect('mongodb://mdbadmin:password@coms-402-sd-22.class.las.iastate.edu:27017/dev', () => {
     // tslint:disable-next-line:no-console
     console.log("connected to DB");
 });

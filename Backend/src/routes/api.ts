@@ -5,13 +5,21 @@ import { User } from "../models/User";
 export const register = ( app: express.Application ) => {
 
     app.get("/user", (req, res) => {
-        res.send("response");
+        const users = User.find();
     });
 
     app.post("/user", (req, res) => {
         const Test = new User({
             name: "test",
             authKey: "testAuthKey"
+        });
+
+        Test.save()
+        .then(data => {
+            res.status(200).json(data);
+        })
+        .catch(err => {
+            res.json({ message: err });
         });
     });
 
