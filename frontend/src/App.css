@@ -76,17 +76,6 @@ html, body, #root {
     height: 100%;
 }
 
-.ProjectPreview {
-    width: 300px;
-    height: 200px;
-    overflow: hidden;
-    display: grid;
-    grid-template-rows: min-content 1fr;
-    color: rgb(44, 44, 44);
-    font-size: 14px;
-    --project-background-col: #ef946c;
-}
-
 .Home {
     box-sizing: border-box;
     padding: 20px;
@@ -98,43 +87,6 @@ html, body, #root {
     grid-template-rows: repeat(auto-fit, 200px);
 }
 
-/*Project Preview Top Half*/
-.Top {
-    border-radius: 10px 10px 0 0;
-    box-sizing: border-box;
-    background-color: #F6F6F6;
-    /* top right bottom left */
-    padding: 10px 7px 10px 7px;
-    box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 4px;
-    z-index: 1;
-}
-
-.bottom-row {
-    display: flex;
-    justify-content: space-between;
-    margin: 4px 0;
-}
-
-#project-name {
-    font-weight: 500;
-    font-size: 18px;
-}
-
 #ta-name {
     margin: 4px 0;
-}
-
-#demo-date {
-    border-radius: 10px;
-    padding: 1px 8px;
-    background-color: var(--project-background-col);
-    box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 4px;
-}
-
-/*Project Preview Bottom Half*/
-.Bottom {
-    /* top right bottom left */
-    padding: 5px 7px 10px 7px;
-    border-radius: 0 0 10px 10px;
-    background-color: var(--project-background-col);
 }
