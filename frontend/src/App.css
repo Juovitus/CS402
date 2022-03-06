@@ -29,13 +29,6 @@ html, body, #root {
     color: white;
 }
 
-.NavItem > span {
-    font-size: 28px;
-    font-weight: 600;
-    margin-right: 50px;
-    margin-left: 20px;
-}
-
 .nav-link, .nav-link-active {
     text-decoration: none;
 }
