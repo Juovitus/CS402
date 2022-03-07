@@ -76,10 +76,6 @@ html, body, #root {
     overflow: auto;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 300px);
+    grid-template-columns: repeat(auto-fit, 330px);
     grid-template-rows: repeat(auto-fit, 200px);
-}
-
-#ta-name {
-    margin: 4px 0;
 }

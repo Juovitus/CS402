@@ -4,15 +4,13 @@ import styled from 'styled-components';
 
 interface Props {
     text: string
-    users: userInfo[]
+    users: userInfo[] 
 }
 
 export const NameList: React.FC<Props> = ({text, users}) => {
     const Users = users.map((user: userInfo, i: number) => {
         return <li key={i}>
-            <a href={user.link} target='_blank' rel='noopener noreferrer'>
-                <Image src={user.picture} />
-            </a>
+            <A href={user.link} target='_blank' rel='noopener noreferrer' link={user.picture}></A>
         </li>
     });
 
@@ -24,16 +22,26 @@ export const NameList: React.FC<Props> = ({text, users}) => {
     );
 }
 
+const pictureSize = '20px'
+
 const Unordered = styled.ul`
     list-style-type: none;
     padding: 0;
     margin: 0;
     display: flex;
     align-items: center;
+    & > li:first-child {
+        margin-right: 5px;
+        line-height: ${pictureSize};
+    }
 `;
 
-const Image = styled.img`
-    height: 20px;
-    width: 20px;
+const A = styled.a<{ link: string }>`
+    background-image: url("${p => p.link}");
+    background-size: contain;
+    height: ${pictureSize};
+    width: ${pictureSize};
+    display: block;
     border-radius: 50%;
+    margin: 0 1.5px;
 `;

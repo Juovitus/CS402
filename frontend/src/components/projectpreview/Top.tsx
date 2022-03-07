@@ -19,8 +19,8 @@ export const Top: React.FC<Props> = ({projectName, demoDate}) => {
         picture: 'https://avatars.githubusercontent.com/u/31934028?v=4',
         link: 'https://github.com/Aarodynamics3'
     }
-    const TAs = [usr]
-    const Students = [usr, usr, usr, usr]
+    const TAs: userInfo[] = [usr]
+    const Students: userInfo[] = [usr, usr, usr, usr]
 
     return (
         <Container>

@@ -24,7 +24,7 @@ export const ProjectPreview: React.FC<Props> = () => {
 }
 
 const Container = styled.div`
-    width: 300px;
+    width: 330px;
     height: 200px;
     overflow: hidden;
     display: grid;
