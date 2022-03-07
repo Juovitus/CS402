@@ -1,21 +1,39 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
+import { NameList } from "./NameList";
 
 interface Props {
     projectName: string
     demoDate: Number
 }
 
+export default interface userInfo {
+    picture: string
+    link: string
+}
+
 export const Top: React.FC<Props> = ({projectName, demoDate}) => {
     const projectPath = `/project/${projectName}`
+    const usr: userInfo = {
+        picture: 'https://avatars.githubusercontent.com/u/31934028?v=4',
+        link: 'https://github.com/Aarodynamics3'
+    }
+    const TAs = [usr]
+    const Students = [usr, usr, usr, usr]
 
     return (
         <Container>
             <ProjectName to={projectPath}>{projectName}</ProjectName>
-            {TAList}
+            <NameList 
+                text='TA'
+                users={TAs}
+            />
             <BottomRow>
-                {StudentList}
+                <NameList 
+                    text='Students'
+                    users={Students}
+                />
                 <DemoDate>Demo - {demoDate} days</DemoDate>
             </BottomRow>
         </Container>
@@ -30,6 +48,9 @@ const Container = styled.div`
     padding: 10px 7px 10px 7px;
     box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 4px;
     z-index: 1;
+    & > ul {
+        margin-top: 8px;
+    }
 `;
 
 const ProjectName = styled(Link)`
@@ -51,7 +72,3 @@ const DemoDate = styled.div`
     background-color: #ef946c;
     box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 4px;
 `;
-
-//TODO make student list and ta list their own fn component
-const TAList = <div id="ta-name">TA</div>
-const StudentList = <div id="student-list">Students</div>
