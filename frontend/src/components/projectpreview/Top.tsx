@@ -1,5 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 interface Props {
     projectName: string
@@ -7,9 +8,11 @@ interface Props {
 }
 
 export const Top: React.FC<Props> = ({projectName, demoDate}) => {
+    const projectPath = `/project/${projectName}`
+
     return (
         <Container>
-            <ProjectName>{projectName}</ProjectName>
+            <ProjectName to={projectPath}>{projectName}</ProjectName>
             {TAList}
             <BottomRow>
                 {StudentList}
@@ -29,9 +32,11 @@ const Container = styled.div`
     z-index: 1;
 `;
 
-const ProjectName = styled.div`
+const ProjectName = styled(Link)`
     font-weight: 500;
     font-size: 18px;
+    text-decoration: none;
+    color: inherit;
 `;
 
 const BottomRow = styled.div`

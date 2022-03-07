@@ -9,7 +9,7 @@ interface Props {
 
 
 export const ProjectPreview: React.FC<Props> = () => {
-    const pName = 'MedHub'
+    const pName = Math.floor(Math.random() * (100 - 1 + 1) + 1).toString()
     const dDate = 4
 
     return (
