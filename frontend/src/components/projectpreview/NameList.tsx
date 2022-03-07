@@ -44,4 +44,5 @@ const A = styled.a<{ link: string }>`
     display: block;
     border-radius: 50%;
     margin: 0 1.5px;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 4px;
 `;
