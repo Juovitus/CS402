@@ -1,5 +1,5 @@
 import React from 'react'
-import userInfo from './Top'
+import userInfo from '../../Interfaces'
 import styled from 'styled-components';
 
 interface Props {

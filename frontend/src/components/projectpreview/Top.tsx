@@ -2,25 +2,17 @@ import React from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 import { NameList } from "./NameList";
+import userInfo from "../../Interfaces";
 
 interface Props {
     projectName: string
     demoDate: Number
+    TAs: userInfo[]
+    Students: userInfo[]
 }
 
-export default interface userInfo {
-    picture: string
-    link: string
-}
-
-export const Top: React.FC<Props> = ({projectName, demoDate}) => {
+export const Top: React.FC<Props> = ({projectName, demoDate, TAs, Students}) => {
     const projectPath = `/project/${projectName}`
-    const usr: userInfo = {
-        picture: 'https://avatars.githubusercontent.com/u/31934028?v=4',
-        link: 'https://github.com/Aarodynamics3'
-    }
-    const TAs: userInfo[] = [usr]
-    const Students: userInfo[] = [usr, usr, usr, usr]
 
     return (
         <Container>
