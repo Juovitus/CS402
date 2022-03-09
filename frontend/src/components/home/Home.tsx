@@ -28,7 +28,6 @@ export const Home: React.FC<Props> = () => {
     return (
         <div className='Home'>
             {projects}
-            {/* <ProjectPreview /> */}
         </div>
     );
 }

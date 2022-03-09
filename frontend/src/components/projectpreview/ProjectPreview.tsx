@@ -8,16 +8,15 @@ interface Props {
     key: any
 }
 
-
 export const ProjectPreview: React.FC<Props> = () => {
     const pName: string = Math.floor(Math.random() * (100 - 1 + 1) + 1).toString()
-    const dDate: Number = 4
+    const dDate: Number = parseInt(pName)
     const usr: userInfo = {
         picture: 'https://avatars.githubusercontent.com/u/31934028?v=4',
         link: 'https://github.com/Aarodynamics3'
     }
     const TAs: userInfo[] = [usr]
-    const Students: userInfo[] = [usr, usr, usr, usr]
+    const Students: userInfo[] = [usr, usr, usr, usr,]
 
     return (
         <Container>
