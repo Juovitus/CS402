@@ -8,16 +8,16 @@ html, body, #root {
 
 .App {
     display: grid;
+    height: 100%;
     grid-template: 1fr 1fr / min-content 1fr;
     grid-template-areas:
         "nav main"
         "nav main";
-    height: 100%;
 }
 
 .Nav {
     grid-area: nav;
-    background-color: rgb(66, 93, 216);
+    background-color: #454372;
     display: flex;
     flex-direction: column;
 }
@@ -29,19 +29,12 @@ html, body, #root {
     color: white;
 }
 
-.NavItem > span {
-    font-size: 28px;
-    font-weight: 600;
-    margin-right: 50px;
-    margin-left: 20px;
-}
-
 .nav-link, .nav-link-active {
     text-decoration: none;
 }
 
 .nav-link-active {
-    background-color: rgb(56, 80, 189);
+    background-color: #2f2963;
 }
 
 .settings-nav-item {
@@ -72,27 +65,17 @@ html, body, #root {
 /* Do not style main. */
 .Main {
     grid-area: main;
+    background-color: rgb(46, 46, 46);
+    height: 100%;
 }
 
-.ProjectPreview {
+.Home {
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+    overflow: auto;
+    height: 100%;
     display: grid;
-    grid-template: 1fr / 1fr;
-    grid-template-areas:
-        "top"
-        "bottom";
-    grid-area: main;
-    background-color: rgb(85, 85, 85);
-}
-
-/* Currently can't change the top/bottom color but can change the ProjectPreview overall, kinda weird*/
-/*Project Preview Top Half*/
-.Top {
-    grid-area: top;
-    background-color: rgb(144, 144, 255);
-}
-
-/*Project Preview Bottom Half*/
-.Bottom {
-    grid-area: bottom;
-    background-color: rgb(0, 200, 100);
+    grid-template-columns: repeat(auto-fit, 330px);
+    grid-template-rows: repeat(auto-fit, 200px);
 }
