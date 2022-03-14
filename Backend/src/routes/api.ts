@@ -8,6 +8,7 @@ export const register = ( app: express.Application ) => {
 
     app.get("/user", (req, res) => {
         const users = User.find();
+        res.json(users);
     });
 
     app.post("/user", (req, res) => {
