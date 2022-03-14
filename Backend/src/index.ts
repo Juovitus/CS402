@@ -3,6 +3,7 @@ import randomstring from "randomstring";
 import axios from "axios";
 import * as routes from "./routes/api";
 import mongoose from "mongoose";
+import cors from "cors";
 
 const app = express();
 
@@ -10,16 +11,19 @@ const app = express();
 const port = 8080;
 let token = "";
 
+app.use(cors({origin: '*'}));
 routes.register( app );
 
-mongoose.connect('mongodb://mdbadmin:password@coms-402-sd-22.class.las.iastate.edu:27017', () => {
+
+mongoose.connect('mongodb://devAdmin:123@coms-402-sd-22.class.las.iastate.edu:27017/dev', (error) => {
     // tslint:disable-next-line:no-console
-    console.log("connected to DB");
+    console.log(error);
 });
 
 
+
+
 app.get("/", (req, res) => {
-    // res.send("Hello TypeScript World!");
     res.redirect("https://git.las.iastate.edu/oauth/authorize?client_id=fc94a7e013a5f5ae499b5fb8cebe8cf1480d21845933231572c6ed4f689167fc&redirect_uri=http://coms-402-sd-22.class.las.iastate.edu:8080/home/&response_type=code&state=FT52maX47nRH5ubBpraPU30CrgnU2ZX0&scope=read_user+api+read_api+read_repository&code_challenge=M5oPBP6RmJPh5QsGtx6ptVH7S2yjqt8sum96jBCyhZg&code_challenge_method=plain");
     // res.send(req.params);
 });
@@ -81,6 +85,8 @@ app.get("/home", (req, res) => {
         // tslint:disable-next-line:no-console
         console.log("test received");
     });
+
+
 
 app.listen(port, () => {
     // tslint:disable-next-line:no-console

@@ -1,11 +1,29 @@
 import express from "express";
 import axios from "axios";
-
+import { User } from "../models/User";
+import mongoose from "mongoose";
 
 export const register = ( app: express.Application ) => {
 
+
     app.get("/user", (req, res) => {
-        res.send("response");
+        const users = User.find();
+        res.json(users);
+    });
+
+    app.post("/user", (req, res) => {
+        const Test = new User({
+            name: "test",
+            authKey: "testAuthKey"
+        });
+
+        Test.save()
+        .then(data => {
+            res.status(200).json(data);
+        })
+        .catch(err => {
+            res.json({ message: err });
+        });
     });
 
     // Returns all projects from a user
