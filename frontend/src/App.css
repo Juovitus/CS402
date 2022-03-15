@@ -37,9 +37,14 @@ html, body, #root {
     background-color: #2f2963;
 }
 
-.settings-nav-item {
+.settings-nav-item, .settings-nav-item-active {
     margin-top: auto;
     padding-top: 20px;
+    text-decoration: none;
+}
+
+.settings-nav-item-active {
+    background-color: #2f2963;
 }
 
 .closeButton-nav-item {

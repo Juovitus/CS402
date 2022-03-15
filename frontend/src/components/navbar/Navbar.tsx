@@ -57,10 +57,13 @@ export const Navbar: React.FC<Props> = () => {
                 make sure to add it above the settings item
                 because settings uses margin-top: auto to
                 stay at the bottom. */}
-            <NavItem id="settings"
-                text="Settings"
-                icon={mdiCogOutline}
-                mount = {mount}/>
+            <NavLink to='/settings'
+                className={({isActive}) => isActive ? 'settings-nav-item-active': 'settings-nav-item'}>
+                <NavItem id="settings"
+                    text="Settings"
+                    icon={mdiCogOutline}
+                    mount = {mount}/>
+            </NavLink>
         </div>
     );
 };
