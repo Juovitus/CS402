@@ -7,6 +7,7 @@ import { Inbox } from './components/inbox/Inbox';
 import { Project } from './components/project/Project';
 import { Settings } from './components/settings/Settings';
 import React, { useState } from 'react'
+import useLocalStorage from 'use-local-storage'
 
 interface IThemeContext{
     theme: string;
@@ -16,10 +17,11 @@ interface IThemeContext{
 export const ThemeContext = React.createContext({} as IThemeContext);
 
 function App() {
-    const [theme, setTheme] = useState("dark");
+    const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
     return (
         <ThemeContext.Provider value = {{theme, setTheme}}>
-        <div className="App">
+        <div className="App" data-theme={theme}>
             <Navbar />
             <div className='Main'>
                 <Routes>

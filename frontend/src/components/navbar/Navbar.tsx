@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import '../../App.css'
 import { NavItem } from "./NavItem";
 import { NavLink } from "react-router-dom";
@@ -10,14 +10,12 @@ import {
     mdiMenu,
     mdiBookOpenOutline
  } from '@mdi/js';
-
 interface Props {
     
 }
 
 export const Navbar: React.FC<Props> = () => {
     const [mount, setMount] = useState(true);
-
     return (
         <div className="Nav">
             <button 

@@ -1,3 +1,4 @@
+import './settings.css';
 import { useContext } from 'react';
 import Switch from 'react-switch';
 import { ThemeContext } from '../../App';
@@ -7,10 +8,10 @@ const ThemeToggle = () => {
     const handleThemeToggle = () => {
         setTheme(theme === 'light' ? 'dark' : 'light');
     };
-    return <div>
+    return <div className='themeToggle'>
         <Switch
-            uncheckedIcon = {false}
-            checkedIcon = {false}
+            uncheckedIcon = {<span>🌑</span>}
+            checkedIcon = {<span>☀️</span>}
             onColor = {'#eee'}
             onChange = {handleThemeToggle}
             checked = {theme === 'light'}

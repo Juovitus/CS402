@@ -5,9 +5,31 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: ease 0.5s linear;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+[data-theme='light'] {
+  --background: rgb(235, 235, 235);
+  --bg-nav:#802019;
+  --bg-nav-settings: #5f1914;
+  --text-primary: black;
+  --text-secondary: white;
+  --accent: #802019;
+  --accent2: rgb(240, 240, 240);
+  --bgcolorTrans: background-color 0.25s linear;
+}
+[data-theme='dark'] {
+  --background: rgb(58, 58, 58);
+  --bg-nav: #454372;
+  --bg-nav-settings: #2f2963;
+  --text-primary: white;
+  --text-secondary: rgb(235, 235, 235);
+  --accent: #454372;
+  --accent2: rgb(116, 116, 116);
+  --bgcolorTrans: background-color 0.25s linear;
 }

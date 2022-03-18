@@ -11,7 +11,16 @@ export const Settings: React.FC<Props> = () => {
     //Get theme value to be able to change it
     const {theme} = useContext(ThemeContext);
     return (
-        <div className='Settings'>Settings[{theme}]<ThemeToggle /></div>
-        
+        <div className = 'Settings'>
+             <div className = 'h1'>
+                Settings    
+            </div>
+            <div className = 'body'>
+                <span className='settings'>
+                    Toggle theme between light/dark
+                </span>
+                <ThemeToggle/>  {/*Darkmode[{theme}]*/}
+            </div>
+        </div>
     );
 }

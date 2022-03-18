@@ -1,0 +1,32 @@
+.react-switch-bg span{
+  margin-left: 0.1em;
+  vertical-align: text-bottom;
+  font-size: 1.2em;
+}
+.h1{
+  font-family: Maven Pro;
+  margin-bottom: 10px;
+  border-bottom: 2px solid;
+  margin-left: 0;
+  font-size: 50px;
+  padding-left: 10px;
+}
+.body{
+ margin-left: 10px
+}
+Switch {
+  display: inline-block;
+}
+.themeToggle{
+  display: inline-block;
+  border-bottom: 2px solid;
+  font-size: 50px;
+}
+.settings{
+  font-size: 25px;
+  padding-right: 5px;
+  border-bottom: 2px solid;
+}
+.react-switch{
+  
+}

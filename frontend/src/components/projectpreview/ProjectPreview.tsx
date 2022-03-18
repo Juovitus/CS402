@@ -37,7 +37,7 @@ const Container = styled.div`
     overflow: hidden;
     display: grid;
     grid-template-rows: min-content 1fr;
-    color: rgb(44, 44, 44);
+    color: var(--text-primary);
     font-size: 14px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.8) 0px 2px 8px 0px;

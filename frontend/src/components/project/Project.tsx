@@ -17,5 +17,5 @@ export const Project: React.FC<Props> = () => {
 }
 
 const Text = styled.span`
-    color: white;
+    color: var(--text-color);
 `;

@@ -16,10 +16,12 @@ html, body, #root {
 }
 
 .Nav {
+    color: var(--text-primary);
+    background-color: var(--bg-nav);
     grid-area: nav;
-    background-color: #454372;
     display: flex;
     flex-direction: column;
+    transition: var(--bgcolorTrans);
 }
 
 .NavItem {
@@ -34,7 +36,9 @@ html, body, #root {
 }
 
 .nav-link-active {
-    background-color: #2f2963;
+    background-color: var(--bg-nav-settings);
+    transition: var(--bgcolorTrans);
+
 }
 
 .settings-nav-item, .settings-nav-item-active {
@@ -44,7 +48,9 @@ html, body, #root {
 }
 
 .settings-nav-item-active {
-    background-color: #2f2963;
+    background-color: var(--bg-nav-settings);
+    transition: var(--bgcolorTrans);
+
 }
 
 .closeButton-nav-item {
@@ -69,8 +75,10 @@ html, body, #root {
 
 /* Do not style main. */
 .Main {
+    color: var(--text-primary);
     grid-area: main;
-    background-color: rgb(46, 46, 46);
+    background-color: var(--background);
+    transition: var(--bgcolorTrans);
     height: 100%;
 }
 

@@ -35,7 +35,7 @@ export const Top: React.FC<Props> = ({projectName, demoDate, TAs, Students}) => 
 const Container = styled.div`
     border-radius: 10px 10px 0 0;
     box-sizing: border-box;
-    background-color: #F6F6F6;
+    background-color: var(--accent2);
     /* top right bottom left */
     padding: 10px 7px 10px 7px;
     box-shadow: rgba(0, 0, 0, 0.26) 0px 1px 4px;
